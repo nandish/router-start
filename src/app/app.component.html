@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-10">
+            <h1>Hello World!</h1>
+            <hr>
+            <a [routerLink]="['/']">Home</a> |
+            <input type="text" #id (input)="0" class="text"> <!-- Hacking (input) = "0"  -> that forces angular to re run change detection -->
+            <a [routerLink]="['/user', id.value]">User</a>
+            <hr>
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
